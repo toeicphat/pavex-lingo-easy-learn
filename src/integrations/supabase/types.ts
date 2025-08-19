@@ -7,7 +7,7 @@ export type Json =
   | Json[]
 
 export type Database = {
-  // Allows to automatically instanciate createClient with right options
+  // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
     PostgrestVersion: "12.2.12 (cd3cf9e)"
@@ -143,6 +143,45 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      dictation_exercises: {
+        Row: {
+          audio_url: string
+          created_at: string
+          created_by: string | null
+          difficulty_level: string | null
+          duration_seconds: number | null
+          id: string
+          is_active: boolean | null
+          title: string
+          transcript: string
+          updated_at: string
+        }
+        Insert: {
+          audio_url: string
+          created_at?: string
+          created_by?: string | null
+          difficulty_level?: string | null
+          duration_seconds?: number | null
+          id?: string
+          is_active?: boolean | null
+          title: string
+          transcript: string
+          updated_at?: string
+        }
+        Update: {
+          audio_url?: string
+          created_at?: string
+          created_by?: string | null
+          difficulty_level?: string | null
+          duration_seconds?: number | null
+          id?: string
+          is_active?: boolean | null
+          title?: string
+          transcript?: string
+          updated_at?: string
+        }
+        Relationships: []
       }
       exercises: {
         Row: {
