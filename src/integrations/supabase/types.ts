@@ -14,7 +14,120 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      courses: {
+        Row: {
+          created_at: string
+          description: string | null
+          discounted_price: number | null
+          duration_hours: number | null
+          id: string
+          instructor_name: string | null
+          is_featured: boolean | null
+          price: number | null
+          rating: number | null
+          status: string | null
+          student_count: number | null
+          thumbnail_url: string | null
+          title: string
+          total_ratings: number | null
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          discounted_price?: number | null
+          duration_hours?: number | null
+          id?: string
+          instructor_name?: string | null
+          is_featured?: boolean | null
+          price?: number | null
+          rating?: number | null
+          status?: string | null
+          student_count?: number | null
+          thumbnail_url?: string | null
+          title: string
+          total_ratings?: number | null
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          discounted_price?: number | null
+          duration_hours?: number | null
+          id?: string
+          instructor_name?: string | null
+          is_featured?: boolean | null
+          price?: number | null
+          rating?: number | null
+          status?: string | null
+          student_count?: number | null
+          thumbnail_url?: string | null
+          title?: string
+          total_ratings?: number | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      dictation_exercises: {
+        Row: {
+          audio_url: string
+          created_at: string
+          difficulty_level: string | null
+          duration_seconds: number | null
+          id: string
+          is_active: boolean | null
+          title: string
+          transcript: string
+          updated_at: string
+        }
+        Insert: {
+          audio_url: string
+          created_at?: string
+          difficulty_level?: string | null
+          duration_seconds?: number | null
+          id?: string
+          is_active?: boolean | null
+          title: string
+          transcript: string
+          updated_at?: string
+        }
+        Update: {
+          audio_url?: string
+          created_at?: string
+          difficulty_level?: string | null
+          duration_seconds?: number | null
+          id?: string
+          is_active?: boolean | null
+          title?: string
+          transcript?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          id: string
+          is_admin: boolean | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          is_admin?: boolean | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          is_admin?: boolean | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
